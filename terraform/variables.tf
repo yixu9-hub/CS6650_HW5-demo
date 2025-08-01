@@ -1,17 +1,3 @@
-# AWS creds (keep these secret!)
-variable "aws_access_key_id" {
-  type      = string
-  sensitive = true
-}
-variable "aws_secret_access_key" {
-  type      = string
-  sensitive = true
-}
-variable "aws_session_token" {
-  type      = string
-  sensitive = true
-}
-
 # Region to deploy into
 variable "aws_region" {
   type    = string
@@ -23,14 +9,17 @@ variable "ecr_repository_name" {
   type    = string
   default = "ecr_service"
 }
+
 variable "service_name" {
   type    = string
   default = "CS6650L2"
 }
+
 variable "container_port" {
   type    = number
   default = 8080
 }
+
 variable "ecs_count" {
   type    = number
   default = 1
