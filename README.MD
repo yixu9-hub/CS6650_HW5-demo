@@ -22,6 +22,8 @@ terraform apply -auto-approve
 
 ### Send Requests
 Make sure you are in terraform folder
+
+Get public ip address
 ```
 aws ec2 describe-network-interfaces \
 --network-interface-ids $(
@@ -43,4 +45,9 @@ aws ec2 describe-network-interfaces \
 Send some requests:
 ```
 curl http://<PUBLIC-IP-ADDRESS>:8080/albums
+```
+
+## Clean Up
+```
+terraform destroy -auto-approve
 ```
