@@ -21,7 +21,7 @@ terraform apply -auto-approve
 ```
 
 ### Send Requests
-.Make sure you are in terraform folder
+Make sure you are in terraform folder
 ```
 aws ec2 describe-network-interfaces \
 --network-interface-ids $(
@@ -38,4 +38,9 @@ aws ec2 describe-network-interfaces \
 ) \
 --query 'NetworkInterfaces[0].Association.PublicIp' \
 --output text
+```
+
+Send some requests:
+```
+curl http://<PUBLIC-IP-ADDRESS>:8080/albums
 ```
