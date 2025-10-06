@@ -2,3 +2,33 @@
 **.tfstate
 **.tfstate.*
 **/.terraform/
+
+# Local terraform state and backups
+terraform.tfstate
+terraform.tfstate.backup
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# Editor / OS files
+.DS_Store
+.vscode/
+.idea/
+
+# Binaries and build artifacts
+*.exe
+*.dll
+*.so
+product-service
+product-service.exe
+
+# Logs
+*.log
